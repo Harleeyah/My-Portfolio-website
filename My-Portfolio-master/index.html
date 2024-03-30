@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">𝑨𝒍𝒊𝒚𝒂𝒉</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FrontEnd developer</p>
+                <h1>Hi I'm <span>Aliyah</span><br>Fasasi from Nigeria</h1>
+            </div>
+        </div>
+    </div>
+ <!------About------>
+    <div id="About">
+        <div class="container-2">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg" alt="aboutPhoto" height="610px" width="450px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Aliyah.<br>
+                        I'm 18 years old and currently a student at Lagos State University (LASU), majoring in English Education, <br>
+                        You might be curious about how a student of English developed an interest in FrontEnd! Well, it all stems from my passion,<br>
+                        In 2021, my mom to me there is an opportunity to learn coding, and I felt excited about it, and was looking forwad to learning it after my secondary school, which I stared August 2021,<br>
+                        As I began, the experience was both challenging and enjoyable. I'm thrilled that I seized the opportunity to learn FrontEnd when it presented itself.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FrontEnd Development</span><br>Responsive Web Desing<br> CSS Frameworks(e.g Bootstrap) <br> JavaScript Frameworks(e.g React, Vue.js)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UDEMY (Online)</span><br> August 2021- April 2022<br> Instructors form around the world teach millions of students on Udemy and I fortunately happen to be one of the students, I learnt Web development there and I took the first course in mt tech journey and career.<br> <b>(i)</b>   I built about 5 projects using HTML, CSS, and Bootstrap <br> <b>(ii) </b>Learnt the basics of JavaScript </li>
+                            <li><span>AltSchool Africa</span><br>April 2022- April 2023<br>AltSchool is an online engineering school I joined, it is a year course that also helped me in my tech journey<br> <b>(i)</b> I started my JavaScript journey at AltSchool<br> <b>(ii)</b> And built a few projects with it<br> <b>(iii)</b> There, I also learnt Vue.js and React, which I later built some websites with  </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021</span><br> Udemy </li>
+                            <li><span>2022</span><br>AltSchool Africa</li>
+                            <li><span>2022</span><br> Lagos State University (LASU)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------Services------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Aliyah Fasasi is still indecisive about what aspect of tech she should choose, is it Data anaysis or Frontend develoment</p>
+                    <a href="a">Learn More</a>
+                </div>
+                <div>
+                    <h2>Data Analyst</h2>
+                    <p>Aliyah Fasasi is still indecisive about what aspect of tech she should choose, is it Data anaysis or Frontend develoment</p>
+                    <a href="a">Learn More</a>
+                </div>
+                <div>
+                    <h2>Data Analyst</h2>
+                    <p>Aliyah Fasasi is still indecisive about what aspect of tech she should choose, is it Data anaysis or Frontend develoment</p>
+                    <a href="a">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
